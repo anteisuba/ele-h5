@@ -23,7 +23,15 @@ run dev
 
 git add .
 
+git commit -m ""
 
+git log  查看日志
+ 
+git diff 比较文件的不同
+
+分支
+git branch
+git checkout
 
 
 
