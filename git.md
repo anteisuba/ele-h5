@@ -31,9 +31,10 @@ git diff 比较文件的不同
 
 分支
 git branch
+切换分支
 git checkout
-
-
+合并分支
+git merge
 
 
 
