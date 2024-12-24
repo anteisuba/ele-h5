@@ -35,7 +35,31 @@ git branch
 git checkout
 合并分支
 git merge
+远程仓库
+git remote origin "link"
+推送到远程仓库
+git push -u origin main
 
+hooks:一些时机的回调
+
+Git hooks:Git流程中时机的回调 
+
+husky:校验commit
+npx husky-init && npm install
+
+commit规范 type(scope?):subject 搜索:commitlint-config-conventional
+        type:bulid chore ci docs feat fix perf refactor
+
+安装commitlint
+npm install --save-dev @commitlint/{config-conventional,cli}
+
+cat <<EEE > .husky/commit-msg
+#!/bin/sh
+. "\$(dirname "\$0")/_husky.sh"
+npx --no -- commitlint --edit "\${1}"
+EEE
+
+chmod a+x .husky/commit-msg
 
 
 
