@@ -17,4 +17,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    port: 3000,
+    //配置代理
+    proxy: {
+      '/api': 'http://localhost:8000',
+      '/imgs': 'http://localhost:8000',
+    }
+  }
 })
